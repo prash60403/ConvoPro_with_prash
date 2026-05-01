@@ -1,6 +1,6 @@
 import streamlit as st
 
-from services.get_models_list import get_ollama_models_list
+from services.get_model_list import get_ollama_models_list
 from services.get_title import get_chat_title
 from services.chat_utilities import get_answer
 from db.conversations import (
@@ -83,4 +83,3 @@ if user_query:
     # 5) Persist assistant message
     if st.session_state.conversation_id:
         add_message(st.session_state.conversation_id, "assistant", assistant_text)
-        
